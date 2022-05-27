@@ -1,80 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <script src="./js/script.js" defer></script>
-</head>
-
-<body>
-
   <head>
-    <nav class="navbar">
-      <div class="navbar__title">Events in Prague</div>
-      <div class="navbar__links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
   </head>
-  <main>
-    <div class="events">
-      <div class="card">
-        <img src="" alt="Picture" class="card__image" />
-        <h2>Event</h2>
-        <h3>Event description...</h3>
 
-      </div>
+  <body>
+    <head>
+      <nav class="navbar">
+        <div class="navbar__title">Events in Prague</div>
+        <div class="navbar__links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </head>
+    <main>
+      <div class="events">
+        <div class="card">
+          <h2>Event</h2>
+          <h3>Event description...</h3>
+        </div>
 
-
-
-      <div class="small-cards"></div>
-      <!-- 
+        <div class="small-cards"></div>
+        <!-- 
         <div class="small-cards">
           <h2>Small Events</h2>
           <button class="button button__small">More</button>
         </div> -->
-    </div>
+      </div>
+    </main>
+    <!-- The Modal Window-->
+    <div class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <!-- close button -->
+        <span class="close">&times;</span>
+        <!-- form to fill in -->
+        <form class="form" action="submit" method="post">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="NAME" value="" />
+          <label for="surname">SURNAME</label>
+          <input type="text" id="surname" name="NAME" value="" />
 
+          <label for="mail">EMAIL</label>
+          <input type="email" id="mail" name="EMAIL" value="" />
+          <br />
 
-  </main>
-  <!-- The Modal Window-->
-  <div class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <!-- close button -->
-      <span class="close">&times;</span>
-      <!-- form to fill in -->
-      <form class="form" action="submit" method="post">
-
-        <label for="name">NAME</label>
-        <input type="text" id="name" name="NAME" value="">
-        <label for="surname">SURNAME</label>
-        <input type="text" id="surname" name="NAME" value="">
-
-        <label for="mail">EMAIL</label>
-        <input type="email" id="mail" name="EMAIL" value="">
-        <br>
-
-        <div>
-          <label for="checkboxes"></label>
-          <div class="checkbox">
-            <input type="checkbox" id="check-one" name="check" unchecked>
-            <label for="check-one">I'm old enough to participate</label>
+          <div>
+            <label for="checkboxes"></label>
+            <div class="checkbox">
+              <input type="checkbox" id="check-one" name="check" unchecked />
+              <label for="check-one">I'm old enough to participate</label>
+            </div>
+            <br />
           </div>
-          <br>
-        </div>
-        <input class="submit" type="submit" value="Submit">
-      </form>
+          <input class="submit" type="submit" value="Submit" />
+        </form>
+      </div>
     </div>
-
-  </div>
-</body>
-
+  </body>
 </html>
