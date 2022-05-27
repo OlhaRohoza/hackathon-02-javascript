@@ -15,7 +15,7 @@ export class featEvent {
     this.container.innerHTML = `<div class="card__featured">
           <img src="${this.image_url}" alt="Picture" class="card__image" /><div class="card__featured--text">
           <h2>${this.name}</h2>
-          <h3>${this.description}</h3>
+          <p>${this.description}</p>
           <button type="submit" class="button button__register">
             Register
           </button></div>`;

@@ -38,11 +38,11 @@ a {
 }
 
 img {
-    
-    width: 60rem;
+
+    width: 400px;
     border-radius: 1em;
     box-shadow: 0.1em 0.1em #888888;
-    }
+}
 
 img:hover {
     transition: 0.7s;
@@ -65,7 +65,7 @@ img:hover {
 }
 
 .card {
-    display: grid;
+    // display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 2em;
     background-color: #D3D4DD;
@@ -98,7 +98,8 @@ img:hover {
 }
 
 .small-cards {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 1em;
     row-gap: 1em;
     margin: 2em;
@@ -108,12 +109,30 @@ img:hover {
     box-shadow: 0.1em 0.1em #888888;
 
     .small-card {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         min-height: auto;
         text-align: center;
         background-color: #8591AC;
         border-radius: 1em;
         padding: 1em;
+        width: 31%;
+        font-size: 60%;
 
     }
+}
+
+.card__featured {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    font-size: 16px;
+}
+
+.card {
+    margin: 0;
 }
