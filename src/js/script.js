@@ -1,4 +1,5 @@
 import { SmallCard } from "./SmallCard";
+import { register } from "./modal";
 
 const loadData = async () => {
   const response = await fetch(
@@ -7,15 +8,19 @@ const loadData = async () => {
   const data = await response.json();
   console.log(data);
 
+  const smallCards = document.querySelector('.small-cards');
+  console.log(smallCards);
   data.forEach(card => {
     const smallCard = new SmallCard(card.id, card.name);
-    document.body.appendChild(smallCard.element);
+    smallCards.append(smallCard.element);
+
   });
 
 
 };
-console.log("hello");
+// console.log("hello");
 loadData();
+register();
 
 
 
