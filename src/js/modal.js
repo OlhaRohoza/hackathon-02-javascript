@@ -10,12 +10,13 @@ export const register = () => {
     // When the user clicks on the button, open the modal
     btn.addEventListener('click', () => {
         console.log('clicked the button register');
-        // modal.style.display = "block";
+        modal.style.display = "block";
     });
 
     // When the user clicks on <span> (x), close the modal
     close.addEventListener('click', () => {
-        modal.style.display = "block";
+        console.log('clicked the button close');
+        modal.style.display = "none";
     });
 
     // When the user clicks anywhere outside of the modal, close it

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+@import 'modal';
 
 *,
 *::before,
@@ -47,7 +48,7 @@ img {
     font-size: 2em;
     margin: 3em;
 
-   
+
 }
 
 .card {
@@ -76,6 +77,3 @@ img {
     border-radius: 1em;
     box-shadow: 0.1em 0.1em #888888;
 }
-
-
-
