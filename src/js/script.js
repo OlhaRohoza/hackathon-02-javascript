@@ -3,19 +3,23 @@ import { featEvent } from "./featClass";
 // import { register } from "./modal";
 
 const loadData = async () => {
-  const response = await fetch("https://test-api.codingbootcamp.cz/api/65d16700/events"
+  const response = await fetch(
+    "https://test-api.codingbootcamp.cz/api/65d16700/events"
   );
   const data = await response.json();
   console.log(data);
 
   let sId = 1;
-  // let featCard = new featEvent(
-  //   data[sId - 1].name,
-  //   data[sId - 1].date,
-  //   data[sId - 1].description,
-  //   data[sId - 1].image_url
-  // );
-  // mainCard.appendChild(featCard.container);
+  const mainCard = document.querySelector(".card");
+  mainCard.replaceChildren();
+  let featCard = new featEvent(
+    data[sId - 1].name,
+    data[sId - 1].date,
+    data[sId - 1].description,
+    data[sId - 1].image_url,
+    data[sId - 1].id
+  );
+  mainCard.appendChild(featCard.container);
 
   const smallCards = document.querySelector(".small-cards");
   console.log(smallCards);
@@ -27,7 +31,7 @@ const loadData = async () => {
     const btnMore = smallCard.element.querySelector(".button__small");
     btnMore.addEventListener("click", () => {
       sId = card.id;
-      const mainCard = document.querySelector(".card");
+      //   const mainCard = document.querySelector(".card");
       mainCard.replaceChildren();
 
       let featCard = new featEvent(
@@ -44,4 +48,3 @@ const loadData = async () => {
 };
 // console.log("hello");
 loadData();
-
