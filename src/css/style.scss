@@ -34,9 +34,9 @@ a {
     color: #FFF;
 }
 
-img {
-    width: 20rem
-}
+// img {
+//     width: 20rem;
+// }
 
 .events {
     display: flex;
@@ -52,7 +52,8 @@ img {
 }
 
 .card {
-    background-color: #8591AC;
+    margin-top: 1em;
+    background-color: #D3D4DD;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0.1em 0.1em #888888;
@@ -71,6 +72,8 @@ img {
     border-radius: 0.3em;
     box-shadow: 0.1em 0.1em #464545;
     text-shadow: 0.1em 0.1em #464545;
+    font-size: 0.5em;
+    transition: 0.7s;
 }
 
 .button:hover {
@@ -83,22 +86,17 @@ img {
 
 .small-cards {
     display: grid;
-    
-
     column-gap: 1em;
     row-gap: 1em;
-    
     margin: 2em;
     background-color: #c7d0e4;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0.1em 0.1em #888888;
     .small-card {
-        
         display: block;
         min-height: auto;
         text-align: center;
-        // flex-direction: column;
         background-color: #8591AC;
         border-radius: 1em;
         padding: 1em;
