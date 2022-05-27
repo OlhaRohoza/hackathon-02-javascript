@@ -21,26 +21,26 @@ export class featEvent {
           </button>`;
   }
   register() {
-    const modal = document.querySelector('.modal');
+    const modal = document.querySelector(".modal");
     console.log(modal);
 
     // Get the button that opens the modal
-    const btn = this.container.querySelector('.button__register');
+    const btn = this.container.querySelector(".button__register");
     console.log(btn);
 
     // Get the <span> element that closes the modal
-    const close = document.querySelector('.close');
+    const close = document.querySelector(".close");
     console.log(close);
 
     // When the user clicks on the button, open the modal
-    btn.addEventListener('click', () => {
-      console.log('clicked the button register');
+    btn.addEventListener("click", () => {
+      console.log("clicked the button register");
       modal.style.display = "block";
     });
 
     // When the user clicks on <span> (x), close the modal
-    close.addEventListener('click', () => {
-      console.log('clicked the button close');
+    close.addEventListener("click", () => {
+      console.log("clicked the button close");
       modal.style.display = "none";
     });
 
@@ -51,36 +51,37 @@ export class featEvent {
       }
     };
 
-    const nameInput = document.getElementById('name');
-    const surnameInput = document.getElementById('surname');
-    const emailInput = document.getElementById('mail');
+    const nameInput = document.getElementById("name");
+    const surnameInput = document.getElementById("surname");
+    const emailInput = document.getElementById("mail");
 
-    const submit = document.querySelector('.submit');
+    const submit = document.querySelector(".submit");
 
-    submit.addEventListener('click', async (e) => {
+    submit.addEventListener("click", async (e) => {
       e.preventDefault();
       const url = `https://test-api.codingbootcamp.cz/api/65d16700/events/${this.id}/registrations`;
       const myDataObject = {
-        "name": nameInput.value,
-        "surname": surnameInput.value,
-        "email": emailInput.value,
-      }
+        name: nameInput.value,
+        surname: surnameInput.value,
+        email: emailInput.value,
+      };
 
       const myResponse = await fetch(url, {
-        "method": "POST",
-        "body": JSON.stringify(myDataObject),
-        "headers": {
-          'Content-Type': 'application/json'
-        }
-      })
-      const myUsableResponse = await myResponse.json()
+        method: "POST",
+        body: JSON.stringify(myDataObject),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const myUsableResponse = await myResponse.json();
       console.log(myUsableResponse);
-
-    })
+      const form = document.querySelector("form");
+      const regSuccess = document.createElement("h3");
+      regSuccess.textContent = "Registered!";
+      if (myUsableResponse.status == "success") {
+        submit.style.display = "none";
+        form.appendChild(regSuccess);
+      }
+    });
   }
-
-
-
-
-
 }
