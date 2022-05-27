@@ -13,12 +13,12 @@ export class featEvent {
   refreshEvent() {
     this.container = document.createElement("div");
     this.container.innerHTML = `<div class="card__featured">
-          <img src="${this.image_url}" alt="Picture" class="card__image" />
+          <img src="${this.image_url}" alt="Picture" class="card__image" /><div class="card__featured--text">
           <h2>${this.name}</h2>
           <h3>${this.description}</h3>
           <button type="submit" class="button button__register">
             Register
-          </button>`;
+          </button></div>`;
   }
   register() {
     const modal = document.querySelector(".modal");
