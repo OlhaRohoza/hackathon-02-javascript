@@ -8,7 +8,7 @@ export class SmallCard {
 
     createCard() {
         this.element = document.createElement('div');
-        this.element.classList.add('small-cards');
+        this.element.classList.add('small-card');
         this.element.innerHTML = `<h2>${this.name}</h2>
             <button class="button button__small">More</button>
         `

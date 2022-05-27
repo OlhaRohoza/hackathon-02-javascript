@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <script src="./js/script.js" defer></script>
-</head>
-
-<body>
-
   <head>
-    <nav class="navbar">
-      <div class="navbar__title">Events in Prague</div>
-      <div class="navbar__links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
   </head>
-  <main>
-    <div class="events">
-      <div class="card">
-        <img src="" alt="Picture" class="card__image" />
-        <h2>Event</h2>
-        <h3>Event description...</h3>
-        <button type="submit" class="button button__register">
-          Register
-        </button>
 
-        <!-- The Modal Window-->
-        <div class="modal">
+  <body>
+    <head>
+      <nav class="navbar">
+        <div class="navbar__title">Events in Prague</div>
+        <div class="navbar__links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </head>
+    <main>
+      <div class="events">
+        <div class="card">
+          <img src="" alt="Picture" class="card__image" />
+          <h2>Event</h2>
+          <h3>Event description...</h3>
 
-          <!-- Modal content -->
-          <div class="modal-content">
-            <!-- close button -->
-            <span class="close">&times;</span>
-            <!-- form to fill in -->
-            <p>Here should be the form for registration</p>
+          <!-- The Modal Window-->
+          <div class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <!-- close button -->
+              <span class="close">&times;</span>
+              <!-- form to fill in -->
+              <p>Here should be the form for registration</p>
+              <button type="submit" class="button button__register">
+                Register
+              </button>
+            </div>
           </div>
-
         </div>
 
-      </div>
-
-      <div class="small-cards"></div>
-      <!-- 
+        <div class="small-cards"></div>
+        <!-- 
         <div class="small-cards">
           <h2>Small Events</h2>
           <button class="button button__small">More</button>
         </div> -->
-    </div>
-  </main>
-</body>
-
+      </div>
+    </main>
+  </body>
 </html>
