@@ -36,6 +36,8 @@ export class featEvent {
     btn.addEventListener("click", () => {
       console.log("clicked the button register");
       modal.style.display = "block";
+      const regHeader = document.querySelector(".form__heading");
+      regHeader.textContent = this.name;
     });
 
     // When the user clicks on <span> (x), close the modal

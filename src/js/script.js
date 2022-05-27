@@ -43,6 +43,12 @@ const loadData = async () => {
       );
 
       mainCard.appendChild(featCard.container);
+
+      // window scrolls to the top on click "more" -- smoothly
+      window.scrollTo({
+        top: 200,
+        behavior: "smooth",
+      });
     });
   });
 };
