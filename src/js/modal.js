@@ -3,6 +3,7 @@ export const register = () => {
 
     // Get the button that opens the modal
     var btn = document.querySelector('.button__register');
+    console.log(btn);
 
     // Get the <span> element that closes the modal
     var close = document.querySelector('.close');
@@ -25,8 +26,6 @@ export const register = () => {
             modal.style.display = "none";
         }
     };
-
-
 }
 
 

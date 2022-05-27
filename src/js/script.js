@@ -3,8 +3,7 @@ import { featEvent } from "./featClass";
 import { register } from "./modal";
 
 const loadData = async () => {
-  const response = await fetch(
-    "https://test-api.codingbootcamp.cz/api/65d16700/events"
+  const response = await fetch("https://test-api.codingbootcamp.cz/api/65d16700/events"
   );
   const data = await response.json();
   console.log(data);
@@ -12,9 +11,11 @@ const loadData = async () => {
   let sId = 1;
   const smallCards = document.querySelector(".small-cards");
   console.log(smallCards);
+
   data.forEach((card) => {
     const smallCard = new SmallCard(card.id, card.name);
-    document.body.appendChild(smallCard.element);
+    smallCards.appendChild(smallCard.element);
+
     const btnMore = smallCard.element.querySelector(".button__small");
     btnMore.addEventListener("click", () => {
       sId = card.id;
