@@ -1,5 +1,6 @@
 import { SmallCard } from "./SmallCard";
 import { featEvent } from "./featClass";
+import { register } from "./modal";
 
 const loadData = async () => {
   const response = await fetch(
@@ -9,7 +10,8 @@ const loadData = async () => {
   console.log(data);
 
   let sId = 1;
-
+  const smallCards = document.querySelector(".small-cards");
+  console.log(smallCards);
   data.forEach((card) => {
     const smallCard = new SmallCard(card.id, card.name);
     document.body.appendChild(smallCard.element);
@@ -30,5 +32,6 @@ const loadData = async () => {
     });
   });
 };
-console.log("hello");
+// console.log("hello");
 loadData();
+register();

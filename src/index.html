@@ -14,10 +14,12 @@
 
   <head>
     <nav class="navbar">
-      <div>Events in Prague</div>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <div class="navbar__title">Events in Prague</div>
+      <div class="navbar__links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
     </nav>
   </head>
   <main>
@@ -29,12 +31,28 @@
         <button type="submit" class="button button__register">
           Register
         </button> -->
+
+        <!-- The Modal Window-->
+        <div class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <!-- close button -->
+            <span class="close">&times;</span>
+            <!-- form to fill in -->
+            <p>Here should be the form for registration</p>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="small-cards">
-        <h2></h2>
-        <button class="button button__small">More</button>
-      </div>
+      <div class="small-cards"></div>
+      <!-- 
+        <div class="small-cards">
+          <h2>Small Events</h2>
+          <button class="button button__small">More</button>
+        </div> -->
     </div>
   </main>
 </body>
