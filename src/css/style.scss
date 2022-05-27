@@ -34,3 +34,48 @@ a {
     color: #FFF;
 }
 
+img {
+    width: 20rem
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #1E2B47;
+    font-size: 2em;
+    margin: 3em;
+
+   
+}
+
+.card {
+    background-color: #8591AC;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em #888888;
+}
+
+.button {
+    float: right;
+    width: 10em;
+    height: 2em;
+    background-color: #2C5CC3;
+    color: #FFF;
+    border: none;
+    border-radius: 0.3em;
+    box-shadow: 0.1em 0.1em #464545;
+    text-shadow: 0.1em 0.1em #464545;
+}
+
+.small-cards {
+    margin: 2em;
+    background-color: #8591AC;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0.1em 0.1em #888888;
+}
+
+
+
