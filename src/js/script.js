@@ -8,20 +8,27 @@ const loadData = async () => {
   const data = await response.json();
   console.log(data);
 
-  let id = null;
+  let sId = 1;
 
   data.forEach((card) => {
     const smallCard = new SmallCard(card.id, card.name);
     document.body.appendChild(smallCard.element);
-  });
+    const btnMore = smallCard.element.querySelector(".button__small");
+    btnMore.addEventListener("click", () => {
+      sId = card.id;
+      const mainCard = document.querySelector(".card");
+      mainCard.replaceChildren();
 
-  const featCard = new featEvent(
-    data[2].name,
-    data[2].date,
-    data[2].description,
-    data[2].image_url
-  );
-  document.body.appendChild(featCard.container);
+      const featCard = new featEvent(
+        data[sId - 1].name,
+        data[sId - 1].date,
+        data[sId - 1].description,
+        data[sId - 1].image_url
+      );
+
+      mainCard.appendChild(featCard.container);
+    });
+  });
 };
 console.log("hello");
 loadData();

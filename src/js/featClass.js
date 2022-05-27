@@ -1,5 +1,5 @@
 export class featEvent {
-  constructor(name, date, description, image_url, regBtn) {
+  constructor(name, date, description, image_url) {
     this.name = name;
     this.date = date;
     this.description = description;
