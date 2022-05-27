@@ -13,6 +13,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    font-size: 16px;
 }
 
 .navbar {
@@ -36,9 +37,9 @@ a {
     color: #FFF;
 }
 
-img {
-    width: 20rem
-}
+// img {
+//     width: 20rem;
+// }
 
 .events {
     display: flex;
@@ -48,19 +49,24 @@ img {
     color: #1E2B47;
     font-size: 2em;
     margin: 3em;
+    background-color: #2C5CC3;
 
 
 }
 
 .card {
-    background-color: #8591AC;
+    margin-top: 1em;
+    background-color: #D3D4DD;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0.1em 0.1em #888888;
 }
 
 .button {
-    float: right;
+
+    // position: absolute;
+    // right: 2em;
+    // top: 3em;
     width: 10em;
     height: 2em;
     background-color: #2C5CC3;
@@ -69,12 +75,35 @@ img {
     border-radius: 0.3em;
     box-shadow: 0.1em 0.1em #464545;
     text-shadow: 0.1em 0.1em #464545;
+    font-size: 0.5em;
+    transition: 0.7s;
+}
+
+.button:hover {
+    background-color: #9B2CC3;
+}
+
+.button__register {
+    float: right;
 }
 
 .small-cards {
+    display: grid;
+    column-gap: 1em;
+    row-gap: 1em;
     margin: 2em;
-    background-color: #8591AC;
+    background-color: #c7d0e4;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0.1em 0.1em #888888;
+
+    .small-card {
+        display: block;
+        min-height: auto;
+        text-align: center;
+        background-color: #8591AC;
+        border-radius: 1em;
+        padding: 1em;
+
+    }
 }
