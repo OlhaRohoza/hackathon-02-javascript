@@ -1,6 +1,6 @@
 import { SmallCard } from "./SmallCard";
 import { featEvent } from "./featClass";
-import { register } from "./modal";
+// import { register } from "./modal";
 
 const loadData = async () => {
   const response = await fetch("https://test-api.codingbootcamp.cz/api/65d16700/events"
@@ -9,6 +9,14 @@ const loadData = async () => {
   console.log(data);
 
   let sId = 1;
+  // let featCard = new featEvent(
+  //   data[sId - 1].name,
+  //   data[sId - 1].date,
+  //   data[sId - 1].description,
+  //   data[sId - 1].image_url
+  // );
+  // mainCard.appendChild(featCard.container);
+
   const smallCards = document.querySelector(".small-cards");
   console.log(smallCards);
 
@@ -22,11 +30,12 @@ const loadData = async () => {
       const mainCard = document.querySelector(".card");
       mainCard.replaceChildren();
 
-      const featCard = new featEvent(
+      let featCard = new featEvent(
         data[sId - 1].name,
         data[sId - 1].date,
         data[sId - 1].description,
-        data[sId - 1].image_url
+        data[sId - 1].image_url,
+        data[sId - 1].id
       );
 
       mainCard.appendChild(featCard.container);
@@ -35,4 +44,4 @@ const loadData = async () => {
 };
 // console.log("hello");
 loadData();
-register();
+

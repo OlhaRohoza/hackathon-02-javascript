@@ -32,20 +32,11 @@
           Register
         </button> -->
 
-        <!-- The Modal Window-->
-        <div class="modal">
 
-          <!-- Modal content -->
-          <div class="modal-content">
-            <!-- close button -->
-            <span class="close">&times;</span>
-            <!-- form to fill in -->
-            <p>Here should be the form for registration</p>
-          </div>
-
-        </div>
 
       </div>
+
+
 
       <div class="small-cards"></div>
       <!-- 
@@ -54,7 +45,41 @@
           <button class="button button__small">More</button>
         </div> -->
     </div>
+
+
   </main>
+  <!-- The Modal Window-->
+  <div class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- close button -->
+      <span class="close">&times;</span>
+      <!-- form to fill in -->
+      <form class="form" action="submit" method="post">
+
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="NAME" value="">
+        <label for="surname">SURNAME</label>
+        <input type="text" id="surname" name="NAME" value="">
+
+        <label for="mail">EMAIL</label>
+        <input type="email" id="mail" name="EMAIL" value="">
+        <br>
+
+        <div>
+          <label for="checkboxes"></label>
+          <div class="checkbox">
+            <input type="checkbox" id="check-one" name="check" unchecked>
+            <label for="check-one">I'm old enough to participate</label>
+          </div>
+          <br>
+        </div>
+        <input class="submit" type="submit" value="Submit">
+      </form>
+    </div>
+
+  </div>
 </body>
 
 </html>
