@@ -1,6 +1,11 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/104372730/177031696-a80a46f0-6e01-41e1-83af-ebb5eb9bc3cf.png" height="200"></a></p>
 
-hackathon #2 Events registration page
+## hackathon #2: Events registration page
+
+### Code
+![](https://img.shields.io/badge/Code-JavaScript-blue)
+![](https://img.shields.io/badge/Code-HTML-blue)
+![](https://img.shields.io/badge/Code-CSS-blue)
 
 - populating a page from database data
 - sending data from form to be stored in the database
